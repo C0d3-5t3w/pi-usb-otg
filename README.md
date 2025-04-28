@@ -1,11 +1,9 @@
 # pi-usb-otg
 
-USB Gadget Configuration
-
 Modify `/boot/firmware/cmdline.txt`:
 
 ```bash
-sudo vi /boot/firmware/cmdline.txt
+sudo nano /boot/firmware/cmdline.txt
 ```
 
 Add the following right after `rootwait`:
@@ -17,7 +15,7 @@ modules-load=dwc2,g_ether
 Modify `/boot/firmware/config.txt`:
 
 ```bash
-sudo vi /boot/firmware/config.txt
+sudo nano /boot/firmware/config.txt
 ```
 
 Add at the end of the file:
@@ -29,7 +27,7 @@ dtoverlay=dwc2
 Create the USB gadget script:
 
 ```bash
-sudo vi /usr/local/bin/usb-gadget.sh
+sudo nano /usr/local/bin/usb-gadget.sh
 ```
 
 Add the following content:
@@ -95,7 +93,7 @@ sudo chmod +x /usr/local/bin/usb-gadget.sh
 Create the systemd service:
 
 ```bash
-sudo vi /etc/systemd/system/usb-gadget.service
+sudo nano /etc/systemd/system/usb-gadget.service
 ```
 
 Add:
